@@ -8,13 +8,14 @@ import {
   IoLogoNodejs,
   IoLogoPython,
 } from "react-icons/io";
+import { SiFirebase } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import {
   SiAdobexd,
   SiAdobeillustrator,
   SiAdobephotoshop,
 } from "react-icons/si";
-
 
 import {
   Container,
@@ -37,7 +38,7 @@ const Skills = ({ close }) => {
 
   return (
     <Container id="skills" close={close}>
-      <InnerContainer >
+      <InnerContainer>
         <HeaderTag>What I Do & Use</HeaderTag>
         <WrapperSection>
           <Content>
@@ -85,14 +86,15 @@ const Skills = ({ close }) => {
           <TechContent>
             <h1>Few Technologies I Use</h1>
             <IconContainer>
-              <IconContainerHeader>
-              Development</IconContainerHeader>
+              <IconContainerHeader>Development</IconContainerHeader>
               <Icons>
                 <IoLogoJavascript style={iconstyles} />
                 <IoLogoHtml5 style={iconstyles} />
                 <IoLogoSass style={iconstyles} />
                 <FaReact style={iconstyles} />
                 <IoLogoNodejs style={iconstyles} />
+                <DiMysql style={iconstyles} />
+                <SiFirebase style={iconstyles} />
                 <IoLogoPython style={iconstyles} />
               </Icons>
               <IconContainerHeader>Design</IconContainerHeader>
