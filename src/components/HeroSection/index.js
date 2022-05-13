@@ -20,6 +20,7 @@ const HeroSection = ({ close }) => {
     if (close && notAnimDone) {
       animation.start({
         y: 0,
+        rotate:0
       });
 
       setNotAnimDone(false);
@@ -27,6 +28,7 @@ const HeroSection = ({ close }) => {
     if (!close && notAnimDone) {
       animation.start({
         y: 200,
+        rotate:10,
       });
     }
   }, [close, animation, notAnimDone]);

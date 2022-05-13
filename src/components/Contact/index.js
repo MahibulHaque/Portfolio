@@ -75,7 +75,7 @@ const Contact = ({ close }) => {
             </a>
           </Social>
           <Comment>
-            <p>Expiration date 2021</p>
+            <p>Expiration date 2022</p>
             <div className="divider"></div>
             <p>Mahibul Haque</p>
           </Comment>
