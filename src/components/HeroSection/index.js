@@ -40,7 +40,7 @@ const HeroSection = ({ close }) => {
             transition={{
               ease: "easeInOut",
               duration: .5,
-              delay: 0,
+              delay: 0.1,
             }}
           >
             HI THERE✌ I'M
@@ -52,7 +52,7 @@ const HeroSection = ({ close }) => {
             transition={{
               ease: "easeInOut",
               duration: .5,
-              delay: 0.1,
+              delay: 0.3,
             }}
           >
             Mahibul Haque
@@ -62,21 +62,21 @@ const HeroSection = ({ close }) => {
           <motion.h3 animate={animation} transition={{
             ease: "easeInOut",
             duration: .5,
-            delay: 0.2,
+            delay: 0.5,
           }}>I craft things for the web</motion.h3>
         </Header>
         <BottomTag>
           <motion.h3 animate={animation} transition={{
             ease: "easeInOut",
             duration: .5,
-            delay: 0.3,
+            delay: 0.7,
           }}>DESIGNER + DEVELOPER</motion.h3>
         </BottomTag>
         <Description>
           <motion.p animate={animation} transition={{
             ease: "easeInOut",
             duration: .5,
-            delay: 0.4,
+            delay: 0.9,
           }}>
             I'm a design minded front-end web developer based in Dhaka,
             Bangladesh.
@@ -86,7 +86,7 @@ const HeroSection = ({ close }) => {
           <motion.div animate={animation} transition={{
             ease: "easeInOut",
             duration: .5,
-            delay: .5,
+            delay: 1.1,
           }}>
             <BtnMain href="https://calendly.com/mahibulhaque" target="blank">
               LET'S TALK!

@@ -51,7 +51,7 @@ const pathVariants4 = {
     pathLength: 1,
 
     transition: {
-      duration: 2,
+      duration: 2.5,
       ease: "easeInOut",
     },
     transitionEnd: {
