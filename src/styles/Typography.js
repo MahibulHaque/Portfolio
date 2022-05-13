@@ -10,7 +10,7 @@ const Typography = createGlobalStyle`
         src: url(${PoppinsSemibold}) format('woff');
         font-weight: Semibold;
         font-style: normal;
-        font-display: swap;
+        /* font-display: swap; */
 
 
     }
@@ -20,7 +20,7 @@ const Typography = createGlobalStyle`
         src: url(${MontserratBold}) format('woff');
         font-weight: Bold;
         font-style: normal;
-        font-display: swap;
+        /* font-display: swap; */
 
 
 
@@ -31,7 +31,7 @@ const Typography = createGlobalStyle`
         src: url(${Poppins}) format('woff');
         font-weight: normal;
         font-style: normal;
-        font-display:swap;
+        /* font-display:swap; */
 
 
     }

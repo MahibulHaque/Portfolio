@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Nav = styled.nav`
+export const Nav = styled.header`
   display: ${({ close }) => (close ? "flex" : "None")};
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--black);
   width: 100vw;
   height: 70px;
@@ -13,6 +13,15 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
 `;
+
+export const HeaderItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height:100%;
+  max-width: 1200px;
+`;
 export const MobileIcon = styled.div`
   width: 2.2rem;
   height: 2.2rem;
@@ -20,21 +29,18 @@ export const MobileIcon = styled.div`
   cursor: pointer;
   @media screen and (max-width: 768px) {
     display: block;
-    margin-right: 5%;
   }
 `;
 
 export const Logo = styled.img`
   height: 70%;
   width: auto;
-  margin-left: 5%;
   cursor: pointer;
 `;
 
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 5%;
 
   .nav_links {
     display: flex;

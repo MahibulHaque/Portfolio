@@ -2,9 +2,10 @@
 const projectsData = [
     {
         id:1, 
-        name: "Quilco", 
-        desc:"Real-time chat messaging web app that is built using Stream API service. The chat app allows for team collaboration and also direct messaging service.",
-        techs:['Stream','React JS','Node JS','Express']
+        name: "Open Robotics", 
+        desc:"An interactive robotics learning platform that allows users practice and build projects from the browser.",
+        techs:['Next.js','MongoDB',"Stripe", "NextAuth"],
+        imageUrl:"https://raw.githubusercontent.com/MahibulHaque/CSE471-Project/main/public/images/loggedHome.png"
     
     },
     {
@@ -21,7 +22,7 @@ const projectsData = [
     },
     {
         id:4,
-        name:'',
+        name:'Netflix Ui Clone',
         desc:'',
         techs:[]
     }

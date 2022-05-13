@@ -46,10 +46,13 @@ const Projects = ({ close }) => {
         <CardSection animate={animation}>
           {projectsData.map((projectData) => (
             <ProjectHolder key={projectData.id}>
+              {projectData.imageUrl && (
+                <img src={projectData?.imageUrl} alt="project" />
+              )}
               <h1>{projectData.name}</h1>
               <p>{projectData.desc}</p>
               <div className="tech-holder">
-                {projectData.techs.map((tech,index) => (
+                {projectData.techs.map((tech, index) => (
                   <span key={index}>{tech}</span>
                 ))}
               </div>
