@@ -5,7 +5,7 @@ const projectsData = [
         name: "Open Robotics", 
         desc:"An interactive robotics learning platform that allows users practice and build projects from the browser.",
         techs:['Next.js','MongoDB',"Stripe", "NextAuth"],
-        imageUrl:"https://raw.githubusercontent.com/MahibulHaque/CSE471-Project/main/public/images/Open robotics hero_image.webp"
+        imageUrl:"https://raw.githubusercontent.com/MahibulHaque/CSE471-Project/main/public/images/logo-red.png"
     
     },
     {
