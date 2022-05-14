@@ -33,7 +33,7 @@ export const MobileIcon = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 70%;
+  height: 49px;
   width: auto;
   cursor: pointer;
 `;

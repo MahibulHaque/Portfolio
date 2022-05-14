@@ -15,15 +15,23 @@ const Home = () => {
   const [close, setClose] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <Suspense fallback={renderLoader()}>
-      <Intro close={close} setClose={setClose} />
-      <Topbar close={close} navOpen={navOpen} setNavOpen={setNavOpen} />
-      <DropdownMenu navOpen={navOpen} setNavOpen={setNavOpen} />
-      <HeroSection close={close} />
-      <Skills close={close} />
-      <Projects close={close} />
-      <Contact close={close} />
-    </Suspense>
+    <>
+      <Suspense fallback={renderLoader()}>
+        <Intro close={close} setClose={setClose} />
+        <Topbar close={close} navOpen={navOpen} setNavOpen={setNavOpen} />
+        <DropdownMenu navOpen={navOpen} setNavOpen={setNavOpen} />
+        <HeroSection close={close} />
+      </Suspense>
+      <Suspense fallback={<div />}>
+        <Skills close={close} />
+      </Suspense>
+      <Suspense fallback={<div />}>
+        <Projects close={close} />
+      </Suspense>
+      <Suspense fallback={<div />}>
+        <Contact close={close} />
+      </Suspense>
+    </>
   );
 };
 

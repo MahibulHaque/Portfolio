@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import projectsData from "../../ProjectsData";
+import LazyLoad from "react-lazyload";
 
 import {
   Container,
@@ -47,7 +48,9 @@ const Projects = ({ close }) => {
           {projectsData.map((projectData) => (
             <ProjectHolder key={projectData.id}>
               {projectData.imageUrl && (
-                <img src={projectData?.imageUrl} alt="project" />
+                <LazyLoad offset={100}>
+                  <img src={projectData?.imageUrl} alt="project" />
+                </LazyLoad>
               )}
               <h1>{projectData.name}</h1>
               <p>{projectData.desc}</p>

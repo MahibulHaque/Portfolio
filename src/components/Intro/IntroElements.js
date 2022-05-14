@@ -12,10 +12,13 @@ export const Screen = styled.div`
         grid-row-start: 1;
     }
     svg{
-        width:70%;
+        padding:20px;
+        width:100%;
         max-width: 700px;
         animation: ${({animationComplete})=>(animationComplete?'upward':'none')} .5s ease-in-out;
         animation-delay: .5s;
+        -webkit-animation: ${({animationComplete})=>(animationComplete?'upward':'none')} .5s ease-in-out;
+        -webkit-animation-delay: .5s;
         @keyframes upward{
             to{
                 opacity:0;

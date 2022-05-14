@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import {
   Container,
@@ -11,90 +11,112 @@ import {
   BtnMain,
   BtnSecond,
 } from "./HeroSectionElements";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { AnimatedDiv, AnimatedH1, AnimatedH3, AnimatedP } from "../../Animated";
 const HeroSection = ({ close }) => {
-  const animation = useAnimation();
-  const [notAnimDone, setNotAnimDone] = useState(true);
-
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  const variants = {
+    visible: { opacity: 1, y: 0, rotate: 0 },
+    hidden: { opacity: 0, y: 100, rotate: 4 },
+  };
   useEffect(() => {
-    if (close && notAnimDone) {
-      animation.start({
-        y: 0,
-        rotate:0
-      });
-
-      setNotAnimDone(false);
+    if (inView) {
+      controls.start("visible");
     }
-    if (!close && notAnimDone) {
-      animation.start({
-        y: 200,
-        rotate:10,
-      });
-    }
-  }, [close, animation, notAnimDone]);
+  }, [inView, controls]);
 
   return (
     <Container id="hero_section" close={close}>
-      <Section className="details">
+      <Section className="details" ref={ref}>
         <Subheader>
-          <motion.p
-            animate={animation}
+          <AnimatedP
+            animate={controls}
+            initial="hidden"
+            variants={variants}
             transition={{
               ease: "easeInOut",
-              duration: .5,
+              duration: 0.5,
               delay: 0.1,
             }}
           >
             HI THERE✌ I'M
-          </motion.p>
+          </AnimatedP>
         </Subheader>
         <Header>
-          <motion.h1
-            animate={animation}
+          <AnimatedH1
+            animate={controls}
+            initial="hidden"
+            variants={variants}
             transition={{
               ease: "easeInOut",
-              duration: .5,
+              duration: 0.5,
               delay: 0.3,
             }}
           >
             Mahibul Haque
-          </motion.h1>
+          </AnimatedH1>
         </Header>
         <Header>
-          <motion.h3 animate={animation} transition={{
-            ease: "easeInOut",
-            duration: .5,
-            delay: 0.5,
-          }}>I craft things for the web</motion.h3>
+          <AnimatedH3
+            animate={controls}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.5,
+              delay: 0.5,
+            }}
+          >
+            I craft things for the web
+          </AnimatedH3>
         </Header>
         <BottomTag>
-          <motion.h3 animate={animation} transition={{
-            ease: "easeInOut",
-            duration: .5,
-            delay: 0.7,
-          }}>DESIGNER + DEVELOPER</motion.h3>
+          <AnimatedH3
+            animate={controls}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.5,
+              delay: 0.7,
+            }}
+          >
+            DESIGNER + DEVELOPER
+          </AnimatedH3>
         </BottomTag>
         <Description>
-          <motion.p animate={animation} transition={{
-            ease: "easeInOut",
-            duration: .5,
-            delay: 0.9,
-          }}>
+          <AnimatedP
+            animate={controls}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.5,
+              delay: 0.9,
+            }}
+          >
             I'm a design minded front-end web developer based in Dhaka,
             Bangladesh.
-          </motion.p>
+          </AnimatedP>
         </Description>
         <Btn>
-          <motion.div animate={animation} transition={{
-            ease: "easeInOut",
-            duration: .5,
-            delay: 1.1,
-          }}>
+          <AnimatedDiv
+            animate={controls}
+            initial="hidden"
+            variants={variants}
+            transition={{
+              ease: "easeInOut",
+              duration: 0.5,
+              delay: 1.1,
+            }}
+          >
             <BtnMain href="https://calendly.com/mahibulhaque" target="blank">
               LET'S TALK!
             </BtnMain>
             <BtnSecond>MY RESUME</BtnSecond>
-          </motion.div>
+          </AnimatedDiv>
         </Btn>
       </Section>
     </Container>
