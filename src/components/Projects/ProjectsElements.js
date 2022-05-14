@@ -32,10 +32,10 @@ export const CardSection = styled(motion.div)`
 `;
 export const ProjectHolder = styled.div`
   display: flex;
-  overflow-x:hidden;
+  overflow-x: hidden;
   flex-direction: column;
   align-items: center;
-  min-height:500px;
+  min-height: 500px;
   min-width: 325px;
   border: 3px solid rgba(249, 249, 249, 0.1);
   border-radius: 2rem;
@@ -62,7 +62,7 @@ export const ProjectHolder = styled.div`
     font-size: 1.6rem;
     color: var(--grey-1);
     width: 85%;
-    text-align:justify;
+    text-align: justify;
     line-height: 2.2rem;
   }
 
@@ -72,10 +72,10 @@ export const ProjectHolder = styled.div`
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     grid-gap: 1.5rem; */
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
     span {
       font-size: 1.4rem;

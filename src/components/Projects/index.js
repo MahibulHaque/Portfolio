@@ -48,8 +48,8 @@ const Projects = ({ close }) => {
           {projectsData.map((projectData) => (
             <ProjectHolder key={projectData.id}>
               {projectData.imageUrl && (
-                <LazyLoad offset={100}>
-                  <img src={projectData?.imageUrl} alt="project" />
+                <LazyLoad offset={100} style={{display:"flex", justifyContent:"center"}}>
+                  <img src={projectData?.imageUrl} alt="project" style={{width:"20%", height:"auto", paddingTop:"4rem"}}/>
                 </LazyLoad>
               )}
               <h1>{projectData.name}</h1>
