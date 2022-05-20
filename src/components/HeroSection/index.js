@@ -28,8 +28,8 @@ const HeroSection = ({ close }) => {
   }, [inView, controls]);
 
   return (
-    <Container id="hero_section" close={close}>
-      <Section className="details" ref={ref}>
+    <Container id="hero_section" close={close} ref={ref}>
+      <Section className="details">
         <Subheader>
           <AnimatedP
             animate={controls}

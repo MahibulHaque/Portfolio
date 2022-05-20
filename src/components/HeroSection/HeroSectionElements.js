@@ -4,15 +4,21 @@ export const Container = styled.div`
   min-height: 100vh;
   background-color: var(--black);
   display: ${({ close }) => (close ? "flex" : "none")};
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
+
+  &>img{
+    aspect-ratio:16 / 9;
+    width:30%;
+    height:auto;
+  }
 `;
 
 
 export const Section = styled.div`
-  max-width: 1200px;
   width: 90%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
