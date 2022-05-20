@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { AnimatedDiv } from "../../Animated";
 
-export const Container = styled.div`
+export const Container = styled(AnimatedDiv)`
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
@@ -12,7 +13,7 @@ export const Container = styled.div`
     pointer-events: ${({ navOpen }) => (navOpen ? "all" : "none")};
   }
 `;
-export const GridWrapper = styled.div`
+export const GridWrapper = styled(AnimatedDiv)`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -24,39 +25,12 @@ export const GridWrapper = styled.div`
     height: 0vh;
     opacity: 1;
     transition: all 1s ease-in-out;
-
-    &.div_1,
-    &.div_1_active {
-      transition-delay: 0s;
-    }
-    &.div_2,
-    &.div_2_active {
-      transition-delay: 0.25s;
-    }
-    &.div_3,
-    &.div_3_active {
-      transition-delay: 0.5s;
-    }
-    &.div_4,
-    &.div_4_active {
-      transition-delay: 0.75s;
-    }
-
-    &.div_1_active,
-    &.div_2_active,
-    &.div_3_active,
-    &.div_4_active {
-      background-color: var(--purple-1);
-      height: 100vh;
-      opacity: 1;
-    }
+    background-color: var(--purple-1);
   }
 `;
 
 export const NavSub = styled.nav`
   width: 100vw;
-  opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
-  transition: all 1.5s ease-in-out;
   height: 70px;
   display: flex;
   align-items: center;
@@ -68,14 +42,14 @@ export const NavSub = styled.nav`
 `;
 export const Logo = styled.img`
   opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
-  transition: all 1.5s ease-in-out;
-  height: 70%;
-  width: auto;
+  transition: all .25s ease-in-out;
+  height: 49px;
+  width: 60.05px;
   margin-left: 5%;
 `;
-export const CloseIcon = styled.div`
+export const CloseIcon = styled(AnimatedDiv)`
   opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
-  transition: all 1.5s ease-in-out;
+  transition: all .25s ease-in-out;
   margin-right: 5%;
   width: 2.6rem;
   height: 2.6rem;
@@ -84,7 +58,7 @@ export const CloseIcon = styled.div`
   cursor: pointer;
 `;
 
-export const NavSectionSocial = styled.div`
+export const NavSectionSocial = styled(AnimatedDiv)`
   display: flex;
   opacity: 1;
   transition: all 1.5s ease-in-out;
@@ -99,16 +73,11 @@ export const NavSectionSocial = styled.div`
 `;
 
 export const HeaderLine = styled.h1`
-  opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
   font-family: PoppinsRegular;
   letter-spacing: 0.3rem;
-  transition: all 0.5s ease-in-out;
   margin-bottom: 2rem;
 `;
 export const SocialLinks = styled.div`
-  opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
-
-  transition: all 0.5s ease-in-out;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -123,10 +92,7 @@ export const SocialLinks = styled.div`
   }
 `;
 
-export const NavNavigation = styled.div`
-  opacity: ${({ navOpen }) => (navOpen ? "1" : "0")};
-
-  transition: all 1s ease-in-out;
+export const NavNavigation = styled(AnimatedDiv)`
   display: flex;
   flex-direction: column;
   align-items: left;

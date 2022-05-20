@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { AnimatedDiv } from "../../Animated"
 
-export const Screen = styled.div`
+export const Screen = styled(AnimatedDiv)`
     width: 100vw;
     height: 100vh;
     background:var(--black);  
-    display:${({close})=>(close ? 'None':'grid')};
+    display:grid;
     place-items:center;
     overflow: hidden;
     &>*{
@@ -15,7 +16,7 @@ export const Screen = styled.div`
         padding:20px;
         width:100%;
         max-width: 700px;
-        animation: ${({animationComplete})=>(animationComplete?'upward':'none')} .5s ease-in-out;
+        /* animation: ${({animationComplete})=>(animationComplete?'upward':'none')} .5s ease-in-out;
         animation-delay: .5s;
         -webkit-animation: ${({animationComplete})=>(animationComplete?'upward':'none')} .5s ease-in-out;
         -webkit-animation-delay: .5s;
@@ -24,7 +25,7 @@ export const Screen = styled.div`
                 opacity:0;
                 width: 20%;
             }
-        }
+        } */
 
     }
 

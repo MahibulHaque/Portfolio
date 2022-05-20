@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { AnimatedDiv } from "../../Animated";
 
-export const Container = styled.div`
+export const Container = styled(AnimatedDiv)`
   min-height: 100vh;
   background-color: var(--black);
-  display: ${({ close }) => (close ? "flex" : "none")};
+  display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
